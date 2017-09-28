@@ -1,0 +1,36 @@
+#rotate {
+  width: 200px;
+  height: 200px;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+#skew {
+  width: 200px;
+  height: 200px;
+  animation-name: skew;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes skew {
+ 0%,50%,100%{transform:skew(1deg, 50deg);}
+  25%,75%{transform: skew(50deg, 1deg);}
+}
+@keyframes skew{
+ 0%,50%,100%{transform:skew(1deg, 50deg);}
+ 25%,75%{transform: skew(35deg, 1deg);} 
+}
