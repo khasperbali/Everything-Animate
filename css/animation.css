@@ -1,6 +1,7 @@
 #rotate {
   width: 200px;
   height: 200px;
+  background-color: pink;
   animation-name: spin;
   animation-duration: 4s;
   animation-delay: 2s;
@@ -21,40 +22,77 @@
 #skew {
   width: 200px;
   height: 200px;
+  background-color: pink;
   animation-name: skew;
   animation-duration: 4s;
   animation-delay: 2s;
   animation-iteration-count: infinite;
 }
 @-moz-keyframes skew {
- 0%,50%,100%{transform:skew(1deg, 50deg);}
-  25%,75%{transform: skew(50deg, 1deg);}
+    0%,50%,100%{transform:skew(1deg, 50deg);}
+    25%,75%{transform: skew(50deg, 1deg);}
 }
 @keyframes skew{
- 0%,50%,100%{transform:skew(1deg, 50deg);}
- 25%,75%{transform: skew(35deg, 1deg);} 
+    0%,50%,100%{transform:skew(1deg, 50deg);}
+    25%,75%{transform: skew(50deg, 1deg);} 
 }
 #all {
+ transform: turn(45deg) skew(-10deg, 30deg);
+ width: 200px;
+ height: 200px;
+ position: relative;
+ background-color: pink;
+ animation-name: turn;
+ animation-duration: 4s;
+ animation-delay: 2s;
+ animation-iteration-count: infinite;
+ font-size: 50px;
+ text-align: center;
+ line-height: 200px;
+}
+
+@-moz-keyframes turn {
+  from {-moz-transform: rotate(0deg) 
+    skew(-10deg, 30deg);}
+  to {-moz-transform:rotate(360deg) 
+    skew(-10deg, 30deg);}
+}
+@-webkit-keyframes turn {
+  from {-webkit-transform: rotate(0deg) 
+    skew(-10deg, 30deg);}
+  to {-webkit-transform: rotate(360deg) 
+    skew(-10deg, 30deg);}
+}
+@keyframes turn {
+  from {transform: rotate(0deg) 
+    skew(-10deg, 30deg);}
+  to {transform: rotate(360deg) 
+    skew(-10deg, 30deg);}
+}
+#animate {
   width: 200px;
   height: 200px;
-  animation-name: all;
+  position: relative;
+  background-color: pink;
+  animation-name: slide;
   animation-duration: 4s;
-  animation-delay: 2s;
   animation-iteration-count: infinite;
 }
-@keyframes all {
-  from {transform: rotate(0deg); }
-  to {transform: rotate(360deg); }
-}
-#all {
-  width: 200px;
-  height: 200px;
-  animation-name: alll;
-  animation-duration: 4s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-}
-@keyframes alll{
-  0%, 50%, 100%{transform: skew(1deg, 25deg);}
-  25%, 75%{transform: skew(25deg, 1deg);}
+
+@keyframes slide {
+    0% {background-color:red; 
+      left:0px; 
+      top:0px;}
+    25% {background-color:yellow; 
+      left:100px; 
+      top:0px;}
+    50% {background-color:blue; 
+      left:100px; 
+      top:50px;}
+    75% {background-color:green; 
+      left:0px; 
+      top:50px;}
+    100% {background-color:red; 
+      left:0px; 
+      top:0px;}
 }
