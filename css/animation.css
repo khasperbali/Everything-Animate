@@ -96,3 +96,25 @@
       left:0px; 
       top:0px;}
 }
+#pseudo:link {
+    color: #FF0000;
+}
+
+#pseudo:visited {
+    color: #00FF00;
+}
+
+#pseudo:hover {
+    color: #FF00FF;
+}
+
+#pseudo:active {
+    color: #0000FF;
+}
+
+#matrix {
+   -moz-transform:    matrix(1.4488, -0.3882, 0.3882, 1.4489, 400px, -100px);
+     -webkit-transform: matrix(1.4488, -0.3882, 0.3882, 1.4489, 400, -100);
+     -o-transform:      matrix(1.4488, -0.3882, 0.3882, 1.4489, 400, -100);
+     transform:         matrix(1.4488, -0.3882, 0.3882, 1.4489, 400, -100);
+}
